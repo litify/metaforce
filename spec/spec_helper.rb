@@ -7,6 +7,8 @@ Dir['./spec/support/**/*.rb'].sort.each {|f| require f}
 
 RSpec.configure do |config|
   config.mock_with :rspec
+  # config.filter_run_when_matching :focus
+  # config.filter_run :focus => true
   config.include Savon::Spec::Macros
 
   config.before(:each) do
